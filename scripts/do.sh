@@ -13,7 +13,7 @@ build_ffmpeg()
     pushd /opt/ffmpeg
     tar -xf /ffmpeg/${FFMPEG}.tar.bz2 || tar -xf /ffmpeg/${FFMPEG}.tar.xz
     pushd ${FFMPEG}
-    ./configure --enable-shared --disable-static --prefix=`pwd`/install
+    ./configure --enable-shared --disable-static --enable-avresample --disable-programs --prefix=`pwd`/install
     make -j8 install
     popd
     popd
