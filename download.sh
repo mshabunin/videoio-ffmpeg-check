@@ -25,11 +25,8 @@ wget \
     https://ffmpeg.org/releases/ffmpeg-1.1.16.tar.bz2
 
 wget\
-    https://libav.org/releases/libav-0.8.21.tar.xz \
     https://libav.org/releases/libav-9.21.tar.xz \
     https://libav.org/releases/libav-11.12.tar.xz \
     https://libav.org/releases/libav-12.3.tar.xz
 
 popd
-
-
