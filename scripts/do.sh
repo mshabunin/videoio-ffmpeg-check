@@ -8,7 +8,7 @@ mkdir -p /opt/opencv
 
 export OPENCV_DOWNLOAD_PATH=/opt/cache
 
-build_ffmpeg() 
+build_ffmpeg()
 {
     pushd /opt/ffmpeg
     tar -xf /ffmpeg/${FFMPEG}.tar.bz2 || tar -xf /ffmpeg/${FFMPEG}.tar.xz
@@ -19,7 +19,7 @@ build_ffmpeg()
     popd
 }
 
-build_opencv() 
+build_opencv()
 {
     pushd /opt/opencv
     rm -rf *
