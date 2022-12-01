@@ -3,6 +3,9 @@
 mkdir -p ffmpeg && pushd ffmpeg
 
 wget \
+    https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz \
+    https://ffmpeg.org/releases/ffmpeg-5.0.2.tar.xz \
+    https://ffmpeg.org/releases/ffmpeg-4.4.3.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.2.4.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.1.6.tar.xz \
@@ -24,9 +27,9 @@ wget \
     https://ffmpeg.org/releases/ffmpeg-1.2.12.tar.bz2 \
     https://ffmpeg.org/releases/ffmpeg-1.1.16.tar.bz2
 
-wget\
-    https://libav.org/releases/libav-9.21.tar.xz \
-    https://libav.org/releases/libav-11.12.tar.xz \
-    https://libav.org/releases/libav-12.3.tar.xz
+#wget\
+#    https://libav.org/releases/libav-9.21.tar.xz \
+#    https://libav.org/releases/libav-11.12.tar.xz \
+#    https://libav.org/releases/libav-12.3.tar.xz
 
 popd
