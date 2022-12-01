@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 export OPENCV_DOWNLOAD_PATH=/workspace/dlcache
 export CCACHE_DIR=/workspace/ccache
@@ -25,11 +25,11 @@ build_opencv()
     PKG_CONFIG_PATH=/workspace/${FFMPEG}/install/lib/pkgconfig \
     cmake \
         -GNinja \
-        -DBUILD_LIST=videoio \
         -DOPENCV_FFMPEG_ENABLE_LIBAVDEVICE=ON \
         /opencv
     grep -q 'WITH_FFMPEG:BOOL=ON' CMakeCache.txt
-    ninja opencv_videoio
+    grep -q 'FFMPEG_FOUND:INTERNAL=1' CMakeCache.txt
+    ninja opencv_test_videoio
     popd
 }
 
