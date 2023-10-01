@@ -8,6 +8,7 @@ RUN \
         software-properties-common \
         pkg-config \
         git wget ccache xz-utils cmake ninja-build yasm \
-        valgrind
+        valgrind \
+        libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev
 
 WORKDIR /scripts

@@ -2,9 +2,10 @@
 
 mkdir -p ffmpeg && pushd ffmpeg
 
-wget \
-    https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz \
-    https://ffmpeg.org/releases/ffmpeg-5.0.2.tar.xz \
+wget -nc \
+    https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz \
+    https://ffmpeg.org/releases/ffmpeg-5.1.3.tar.xz \
+    https://ffmpeg.org/releases/ffmpeg-5.0.3.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.4.3.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz \
     https://ffmpeg.org/releases/ffmpeg-4.2.4.tar.xz \

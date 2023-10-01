@@ -33,6 +33,26 @@ build_opencv()
     popd
 }
 
+test_opencv()
+{
+    pushd /workspace/build-opencv
+    LD_LIBRARY_PATH=/workspace/${FFMPEG}/install/lib \
+    OPENCV_TEST_DATA_PATH=/opencv_extra/testdata \
+        ./bin/opencv_test_videoio \
+            --gtest_filter=*ffmpeg*:*FFmpeg*:*video* 2>&1 \
+                | tee /workspace/log_${FFMPEG}.txt
+
+    #valgrind --gen-suppressions=all --suppressions=/opencv/platforms/scripts/valgrind_3rdparty.supp \
+
+    popd
+}
+
+# FFMPEG=system
+# build_opencv
+# test_opencv
+
+# exit
+
 for FFMPEG in /ffmpeg/* ; do
     FFMPEG=$(basename -- "${FFMPEG}")
     FFMPEG=${FFMPEG/\.tar\.xz/}
@@ -40,5 +60,6 @@ for FFMPEG in /ffmpeg/* ; do
     echo "=== BEGIN: ${FFMPEG}"
     build_ffmpeg
     build_opencv
+    test_opencv
     echo "=== END: ${FFMPEG}"
 done
