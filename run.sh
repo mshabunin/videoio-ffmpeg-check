@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -exu
 
 mkdir -p workspace
 
@@ -14,5 +14,5 @@ docker run -it \
     -v `pwd`/scripts:/scripts:ro \
     -v `pwd`/workspace:/workspace \
     ${tag} \
-    /bin/bash
-    # script -c ./do.sh
+    /bin/bash -c /scripts/build.sh
+    # /bin/bash

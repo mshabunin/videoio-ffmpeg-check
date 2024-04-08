@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -exu
 
 export OPENCV_DOWNLOAD_PATH=/workspace/dlcache
 export CCACHE_DIR=/workspace/ccache
